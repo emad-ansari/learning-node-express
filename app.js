@@ -25,3 +25,7 @@ const showDetails = (data)=> {
     container.append(Name, Age, College, Roll);
     document.querySelector('input').value = '';
 }
+
+
+
+

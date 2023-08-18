@@ -1,6 +1,8 @@
 const express= require('express');
 const app = express();
 const PORT = 8000;
+const greeting = require('./index');
+console.log(greeting);
 
 
 const studentData = {
@@ -51,12 +53,12 @@ app.get('/api/:name', (req, res)=> {
     }else {
         res.json(studentData['unknown']);
     }
-
-    
 });
 
-app.post('/user', (req, res)=> {
-    res.send('posted successfull')
+app.post('/addNewStudent', (req, res)=> {
+    // console.log('post request send')
+    // console.log(req);
+  
   
 
 });
