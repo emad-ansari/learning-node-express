@@ -5,3 +5,16 @@ Topic => 1). Express instalation and setup
          5). Form & input
          6). Models ORM and databse - MongoDb
          7). Express generator  
+
+Express =>  1) Express is  a fast,, unopinioted minimalist web framework for node.js
+            2) Express is a server side or back-end framework. It is not comaparable to client side frameworks like React, Angular & Vue
+            3) It can be used in combination to those frameworks to build a full stack application 
+
+Middleware => Middleware are function that have access to request and response object
+            Express have built in middleware but middleware also comes from third party packages
+            as well as custom middleware.
+        Process of middleware:-
+            -> Execute any code 
+            -> make changes to req and res object 
+            -> end response cycle
+            -> call next middleware in in the stack
