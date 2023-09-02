@@ -1,13 +1,15 @@
 const express= require('express');
 const app = express();
+const bodyParser = require('body-parser')
 const PORT = 3000;
 const path = require('path');
 const findStudent = require('./public/js/searchStudent')
-const allStudents = require('./data/studentdata')
-
+const studentdatabase = require('./data/studentdata')
+// console.log(studentdatabase)
 
 
 app.use(express.static('public'))
+app.use(bodyParser.json())
 
 
 app.get('/api/:name', (req, res)=> {
@@ -15,7 +17,7 @@ app.get('/api/:name', (req, res)=> {
     const studentName = req.params.name.toLowerCase();
     if (studentName === 'all'){
         // respond with all student 
-        res.json(allStudents)
+        res.json(studentdatabase)
     }
     else {
         // respond for a asking student
@@ -25,16 +27,20 @@ app.get('/api/:name', (req, res)=> {
  
 });
 
-app.post('/addNewStudent', (req, res)=> {
-    // console.log('post request send')
-    // console.log(req);
+app.post('/api/addstudent', (req, res)=> {
+    const newStudentData = req.body;
+    console.log(newStudentData)
+
+    studentdatabase.push(newStudentData)
+    res.status(200).send('Student data received');
 });
 
-app.delete('/user/deleteSomething', (req, res)=> {
-    res.send('delete request successfully');
+app.delete('/api/deletestudent', (req, res)=> {
+    const student_roll = req.body.student_roll;
+    console.log( "I get the student roll to delete", student_roll)
+    res.status(200).json({message: 'student deleted successfully'})
+    
 })
 
-app.put('/user/putSomething', (req, res)=> {
-    res.send('put request successfully');
-})
+
 app.listen(PORT, ()=> console.log(`server is running on port ${PORT}`));

@@ -25,8 +25,7 @@ const studentDetails = [
         college: "Galgotias University",
         rollno: 4
     },
-   
-    
+
     {
         name: "faiz rahman", 
         age: 20,
@@ -34,6 +33,8 @@ const studentDetails = [
         rollno: 5
     },
 ];
+
+
 
 module.exports = studentDetails;
 

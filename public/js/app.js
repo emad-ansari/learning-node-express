@@ -1,6 +1,5 @@
 // fetch the student details from serrver
-
-console.log('hello');
+console.log("hello add student");
 
 const myBtn = document.getElementById('searchBtn');
 myBtn.addEventListener('click', fetchData);
@@ -11,11 +10,8 @@ async function fetchData(){
     try{
         const res = await fetch (url);
         const data = await res.json();
-
-    
         (inputName === 'all')? showAllStudent(data) : showOneStudent(data)
-        
-       1
+         
     }catch(err){
         console.log(`Something went wrong ${err}`);
     } 
@@ -31,7 +27,7 @@ const showAllStudent = (data)=> {
         const College = document.createElement('div');
 
         // insert the information to these created div
-        Roll.innerText = data[i].rollno;
+        Roll.innerText = data[i].roll;
         Name.innerText = data[i].name;
         Age.innerText = data[i].age;
         College.innerText = data[i].college
@@ -39,28 +35,30 @@ const showAllStudent = (data)=> {
         container.append(Roll, Name, Age, College);
     }
 
-
 }
 
 const showOneStudent = (data)=>{
+    console.log(data)
    
     const container = document.querySelector('.student-data');
-    console.log(container)
+
     const Roll = document.createElement('div');
     const Name = document.createElement('div');
     const Age = document.createElement('div');
     const College = document.createElement('div');
-
-    Roll.innerText = data.rollno;
+    console.log(data.roll)
+    Roll.innerText = data.roll;
     Name.innerText = data.name;
     Age.innerText = data.age;
     College.innerText = data.college
     container.append(Roll, Name, Age, College);
 
-
-
-
 }
+
+
+
+
+
 
 
 

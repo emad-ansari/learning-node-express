@@ -38,11 +38,23 @@ body {
     margin-bottom: 15px;
 }
 
+.add-and-delete {
+    display: flex;
+    margin-right: 150px;
+    gap: 10px;
+}
+
+#add{
+    background-color: rgb(186, 255, 48);
+}
+#delete {
+    background-color:rgb(197, 72, 97);
+    color: white
+
+}
 .button-and-add-new-student-btn a {
-    background-color: aqua;
     padding: 5px;
     border-radius: 3px;
-    margin-right: 150px;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     color : black;
@@ -85,4 +97,35 @@ body {
 
 }
 
+#delete-popup {
+    display: none;
+    width: 350px;
+    height: 200px;
+    border: 2px solid white;
+    padding: 10px;
+    margin-left: 500px;
+    margin-top: 160px;
+    border-radius: 5px;
+    color : white;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#roll-input {
+    width: 95%;
+    padding: 6px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+#delete-popup button{
+    width: 150px;
+    padding: 6px;
+    margin-left: 30%;
+
+}
+#delete-popup i {
+    float : right;
+    font-size: 20px;;
+    margin-bottom: 5px;;
+}
 

@@ -12,7 +12,7 @@ const isStudentMatch = (studentName)=> {
         name: "unknown",
         age: 0,
         college: "unknown",
-        rollno: 0
+        roll: 0
     };
     return (studentData)? studentData : unknownStudent;
 }
