@@ -18,3 +18,16 @@ Middleware => Middleware are function that have access to request and response o
             -> make changes to req and res object 
             -> end response cycle
             -> call next middleware in in the stack
+
+
+difference between the (==) & (===) operator 
+(==): operator does not check the type of both operand, It only compare the value and returns true or false value
+example => let a = 100
+           let b = '100'
+           console.log(a == b) => true
+(===): operator does check the type of the both operand as well as the value of both operand 
+example => let a = 100
+           let b = '100'
+           console.log(a === b) => false
+
+                                                                                                                                                
