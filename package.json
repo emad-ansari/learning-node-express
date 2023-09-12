@@ -2,9 +2,10 @@
   "name": "express-project",
   "version": "1.0.0",
   "description": "",
-  "main": "express-project/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "author": "Emad",
   "license": "ISC",
